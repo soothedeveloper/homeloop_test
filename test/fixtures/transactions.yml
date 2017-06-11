@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  latitude: 9.99
+  longitude: 9.99
+  price: 9.99
+  nb_rooms: 1
+  square_meters: 1
+
+two:
+  latitude: 9.99
+  longitude: 9.99
+  price: 9.99
+  nb_rooms: 1
+  square_meters: 1

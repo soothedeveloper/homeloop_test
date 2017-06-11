@@ -9,6 +9,25 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header class='text-center'>
+      <div class='container'>
+        <%= image_tag("logo.png", :alt => 'logo') %>
+      </div>
+    </header>
+
+    <div class='container'>
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
+
+      <%= yield %>
+    </div>
+
+    <footer class='footer text-center'>
+      <div class='container'>
+        <p>●</p>
+        <p class='small'>Any issue? Contact tech@homeloop.fr</p>
+      </div>
+    </footer>
   </body>
 </html>

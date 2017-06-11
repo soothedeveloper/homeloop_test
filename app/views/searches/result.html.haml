@@ -1,0 +1,22 @@
+%h3.text-center= 'Result'
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th='id'
+      %th='price'
+      %th='area(m2)'
+      %th='rooms'
+      %th='date'
+
+  %tbody
+    - @search.results.each do |transaction|
+      %tr
+        %td=transaction.id
+        %td=transaction.price
+        %td=transaction.square_meters
+        %td=transaction.nb_rooms
+        %td=transaction.date
+
+= button_tag(:type => 'button') do
+  = link_to 'Search again', root_path

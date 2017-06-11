@@ -1,0 +1,35 @@
+%div.jumbotron.text-center
+  %h3= 'Find previous transactions next to you'
+
+  .row
+    %div.col-sm-12.col-md-2.offset-md-3.text-center
+      = image_tag("image.png", :alt => 'image')
+    %div.col-md-5.text-center
+      = form_for @search.query do |f|
+        = f.email_field :email, placeholder: 'enter your email'
+        = f.hidden_field :latitude
+        = f.hidden_field :longitude
+        = f.submit :find
+
+%div.row
+  %div.col-md-4.offset-md-2
+    %article
+      %h5.text-right='A beautiful tool...'
+      %p
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+        ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident,
+        sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+  %div.col-md-4
+    %article
+      %h5='... for a wonderful team'
+      %p
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+        in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
